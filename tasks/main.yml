@@ -1,0 +1,15 @@
+---
+- name: add key
+  apt_key:
+    keyserver: keyserver.ubuntu.com
+    id: 379CE192D401AB61
+
+- name: add PPA
+  apt_repository:
+    repo: deb https://rundeck.bintray.com/rundeck-deb /
+    state: present
+
+- name: install
+  apt:
+    name: rundeck
+    state: present
