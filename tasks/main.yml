@@ -13,3 +13,9 @@
   apt:
     name: rundeck
     state: present
+
+- name: enable
+  systemd:
+    name: rundeckd
+    enabled: yes
+    state: started
