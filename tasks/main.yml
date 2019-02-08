@@ -14,6 +14,12 @@
     name: rundeck
     state: present
 
+- name: install cli
+  apt:
+    name: rundeck-cli
+    state: present
+  when: rundeck.install_cli
+
 - name: enable
   systemd:
     name: rundeckd

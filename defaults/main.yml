@@ -1,2 +1,4 @@
 ---
 # defaults file for rundeck
+rundeck:
+  install_cli: true
